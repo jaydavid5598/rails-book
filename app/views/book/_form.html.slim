@@ -1,0 +1,24 @@
+=form_for :book do |f|
+    .grid
+        .tile-lg-6
+            .field-group
+                label.label
+                | Book Title&nbsp;
+                span.text-danger *
+                .field-container
+                    =f.text_field :title, class: 'field field--large', data: { validate: 'required' }, placeholder: 'Book Title'
+                .field-helper
+            .field-group
+                label.label
+                | Book Content&nbsp;
+                span.text-danger *
+                .field-container
+                    =f.text_area :description, class: 'field field--large', data: { validate: 'required' }, placeholder: 'Book Description'
+                .field-helper
+            .field-group
+                .field-container.field-container--checkbox.mb-0.mt-2
+                    =f.check_box :is_private, class: 'field field--checkbox'
+                    label.label-checkbox
+                        span Private Book
+    =f.button "", type: "submit", class: "button button--brand button--line button--validate mt-4 mb-6" do
+        | Save

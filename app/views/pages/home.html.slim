@@ -1,0 +1,14 @@
+     
+-if user_signed_in?
+    =render 'book/show_book'
+-else
+    .home
+        .title-page
+            h1 Welcome to Books
+        .description-page
+            h5 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        .links
+            = link_to(user_facebook_omniauth_authorize_path, class: "nav-link") do
+                | Register using Facebook
+            = link_to(user_google_oauth2_omniauth_authorize_path, class: "nav-link") do
+                | Register using Google

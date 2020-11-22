@@ -1,0 +1,26 @@
+.container
+    .addbook
+        =link_to book_new_path 
+            | Add New Book
+            .svg
+            = svg_icon('icon-add', class: 'bi bi-plus-circle')
+    .showbook
+        =link_to book_post_path 
+            | Show Public Post
+            .svg
+            = svg_icon('book', class: 'bi bi-book')
+    
+- current_user.books.each do |p|
+    .card
+        .card-body
+            h5.card-title = p.title         
+            h6.card-subtitle.mb-2.text-muted = p.description
+            hr
+            .card-links
+                =link_to show_book_info_path(p.id)
+                    | Info
+                =link_to edit_book_path(p.id)
+                    | Edit 
+                =link_to show_book_info_url(p.id), method: :delete, data: { confirm: 'are you sure?'}
+                    | Delete
+                

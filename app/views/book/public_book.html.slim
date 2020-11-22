@@ -1,0 +1,11 @@
+.public-books   
+    h1 Public Books
+    .list   
+    - @book.each do |p|
+            .card
+                .card-body
+                    h5.card-title = p.title
+                    h6.card-subtitle.mb-2.text-muted = p.description
+                    br
+                    h6.card-posted-by Posted by:  #{ p.user.name}
+                  

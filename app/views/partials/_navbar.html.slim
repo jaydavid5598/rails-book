@@ -1,0 +1,19 @@
+nav.navbar.navbar-expand-lg
+  a.navbar-brand href="/"  Book Post
+  button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button" 
+    span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto
+
+    -if user_signed_in?
+        -if name = current_user.present? ? current_user.name : "User"
+            | Welcome, #{name}
+        = link_to(destroy_user_session_path, class: "nav-link", method: :delete) do
+            | Sign Out
+      
+    -else
+        = link_to(new_user_registration_path, class: "nav-link") do
+            | Sign Up
+
+        = link_to(new_user_session_path, class: "nav-link") do
+            | Sign In

@@ -1,0 +1,28 @@
+.card-links{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container{
+
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+hr{
+    width:15%;
+}
+
+.public-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+.card-posted-by{
+    color: rgb(82, 82, 82);
+}

@@ -1,0 +1,7 @@
+h1 Book number: #{@book.id}
+h1 Book Title: #{@book.title}
+h6 Book Descrition: #{@book.description}
+- if @book.is_private?
+    h1 Private Book
+-else
+    h1 Public Book
