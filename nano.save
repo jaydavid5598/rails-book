@@ -1,0 +1,8 @@
+ame = Justine Paul Guiao
+       email = jpbguiao@rpinnotech.com
+
+git config --local -e
+[user]
+       name = Justine Paul Guiao
+       email = jpbguiao@rpinnotech.com
+

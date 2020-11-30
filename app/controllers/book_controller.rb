@@ -4,7 +4,8 @@ class BookController < ApplicationController
 
     def show_book
     end
-
+   
+    
     def public_book
         @book = Book.where(is_private: false)
     end

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
- root to: 'pages#home'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  root to: 'pages#home'
+
   get    'book/post',     to: 'book#public_book'
 
   get    'book/new',      to: 'book#new_book'

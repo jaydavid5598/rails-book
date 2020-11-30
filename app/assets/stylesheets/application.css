@@ -55,3 +55,8 @@
     padding: 2px;
     background: rgb(51, 51, 51);
 }
+
+.linkss:hover{
+    text-decoration: none;
+    color: blue;
+}
